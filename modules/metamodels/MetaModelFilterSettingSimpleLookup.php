@@ -61,6 +61,20 @@ class MetaModelFilterSettingSimpleLookup extends MetaModelFilterSetting
 			$this->get('onlypossible') ? $arrIds : NULL,
 			(bool)$this->get('onlyused')
 		);
+		
+		// Remove empty values.
+		foreach ($arrOptions as $mixOptionKey => $mixOptions)
+		{
+			// Remove html/php tags.
+			$mixOptions = strip_tags($mixOptions);
+			$mixOptions = trim($mixOptions);
+
+			if($mixOptions === '' ||$mixOptions === null)
+			{
+				unset($arrOptions[$mixOptionKey]);
+			}
+		}
+
 		return $arrOptions;
 	}
 
@@ -144,7 +158,7 @@ class MetaModelFilterSettingSimpleLookup extends MetaModelFilterSetting
 
 		$objAttribute = $this->getMetaModel()->getAttributeById($this->get('attr_id'));
 		$arrOptions = $objAttribute->getFilterOptions(NULL, true);
-
+		
 		return array(
 			$this->getParamName() => array
 			(
@@ -174,7 +188,7 @@ class MetaModelFilterSettingSimpleLookup extends MetaModelFilterSetting
 	/**
 	 * {@inheritdoc}
 	 */
-	public function getParameterFilterWidgets($arrIds, $arrFilterUrl, $arrJumpTo, $blnAutoSubmit)
+	public function getParameterFilterWidgets($arrIds, $arrFilterUrl, $arrJumpTo, $blnAutoSubmit, $blnHideClearFilter)
 	{
 		// if defined as static, return nothing as not to be manipulated via editors.
 		if (!$this->enableFEFilterWidget())

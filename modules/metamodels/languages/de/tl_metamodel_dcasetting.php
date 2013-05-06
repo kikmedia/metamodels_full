@@ -1,77 +1,66 @@
 <?php
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package	   MetaModels
- * @subpackage Backend
- * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-05T14:11:18+02:00
  */
 
-/**
- * Fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['dcatype']         = array('Typ', 'Den Attributtyp auswählen.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['attr_id']         = array('Attribute', 'Attribute, auf die sich diese Einstellung bezieht.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['template']        = array('Eigenes Template für die Darstellung', 'Ein Template auswählen, das für das ausgewählte Attribut benutzt werden soll. Gültige Templatenamen beginnen mit "mm_<type>" - type steht dabei für den &lt;type&gt;');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['tl_class']        = array('Backend-Class', 'Hier können eine oder mehrere Backend-Classes festgelegt werden. Für bessere Bedienung ist die Benutzung des Stylepickers empfohlen.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['stylepicker']     = 'Stylepicker';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['legendhide']      = array('Legende verbergen','Die Legende standardmäßig verbergen.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['legendtitle']     = array('Legendentitel','Hier können Sie den Legendentitel angeben.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['name_langcode']   = 'Sprache';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['name_value']      = 'Legendentitel';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['mandatory']       = array('Pflichtfeld', 'Auswählen, wenn dieses Attribut ein Pflichtfeld sein soll.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['chosen']          = array('Chosen', 'Grafisches Auswahlmenü "Chosen" aktivieren.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['filterable']      = array('Filterbar', 'Auswählen, wenn dieses Attribut für die Filterung im Backend zur Verfügung stehen soll.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortable']        = array('Sortierbar', 'Auswählen, wenn dieses Attribut für die Sortierung im Backend zur Verfügung stehen soll.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['searchable']      = array('Durchsuchbar', 'Auswählen, wenn dieses Attribut für die Suche im Backend zur Verfügung stehen soll.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['flag']            = array('Sortierung überschreiben', 'Auswählen, falls die globalen Sortiervorgaben der Palette für dieses Element überschrieben werden sollen.');
-
-
-/**
- * Legends
- */
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['title_legend']    = 'Typ';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['advanced_legend'] = 'Experteneinstellungen';
-
-/**
- * Buttons
- */
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['new']             = array('Neu', 'Neue Einstellung erzeugen.');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['edit']            = array('Einstellung bearbeiten', 'Die Einstellung ID %s bearbeiten');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['copy']            = array('Einstellung kopieren', 'Die Einstellung ID %s kopieren');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['delete']          = array('Einstellung löschen', 'Die Einstellung ID %s löschen');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['show']            = array('Einstellungsdetails', 'Die Details für die Einstellung ID %s anzeigen');
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['addall']          = array('Alle hinzufügen', 'Alle Attribute zur Palette hinzufügen');
-
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['row']             = '%s <strong>%s</strong> %s <em>[%s]</em> <span class="tl_class">%s</span>';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['legend_row']      = '<div class="dca_palette">%s%s</div>';
-
-/**
- * References
- */
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['dcatypes']['legend']         = 'Legende';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['addall']['0']                = 'Alle hinzufügen';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['advanced_legend']            = 'Erweitert';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['alwaysSave']['0']            = 'Immer speichern';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['attr_id']['0']               = 'Attribute';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['backend_legend']             = 'Backend';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['chosen']['0']                = 'Chosen';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['cols']['0']                  = 'Spalten';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['config_legend']              = 'Einstellungen';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['copy']['0']                  = 'Kopiere Einstellung';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['copy']['1']                  = 'Kopiere Einstellung ID %s';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['dcatype']['0']               = 'Typ';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['dcatype']['1']               = 'Wählen Sie den Attributstypen aus.';
 $GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['dcatypes']['attribute']      = 'Attribut';
-
-/**
- * Reference
- */
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['1']     = 'Nach dem ersten Buchstaben aufsteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['2']     = 'Nach dem ersten Buchstaben absteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['3']     = 'Nach dem ersten "length" Buchstaben aufsteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['4']     = 'Nach dem ersten "length" Buchstaben absteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['5']     = 'Nach Tag aufsteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['6']     = 'Nach Tag absteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['7']     = 'Nach Monat aufsteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['8']     = 'Nach Monat absteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['9']     = 'Nach Jahr aufsteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['10']    = 'Nach Jahr absteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['11']    = 'Aufsteigend sortieren';
-$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['12']    = 'Absteigend sortieren';
-
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['dcatypes']['legend']         = 'Legende';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['delete']['0']                = 'Lösche Einstellung';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['delete']['1']                = 'Lösche Einstellung ID %s';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['edit']['0']                  = 'Einstellung bearbeiten';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['edit']['1']                  = 'Bearbeite Einstellungen ID %s';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['filterable']['0']            = 'Filterbar';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['includeBlankOption']['0']    = 'Leere Option einfügen';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['legendhide']['0']            = 'Legende verstecken';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['legendhide']['1']            = 'Die Legende standardmäßig verstecken.';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['legendtitle']['0']           = 'Legenden-Titel';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['legendtitle']['1']           = 'Hier können Sie den Legenden-Titel eingeben.';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['mandatory']['0']             = 'Pflichtfeld';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['mandatory']['1']             = 'Wählen Sie diese Option, wenn das Attribut ein Pflichtfeld ist.';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['name_langcode']              = 'Sprache';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['name_value']                 = 'Legenden-Titel';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['new']['0']                   = 'Neu';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['new']['1']                   = 'Neue Einstellung erstellen.';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['rows']['0']                  = 'Zeilen';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['searchable']['0']            = 'Suchbar';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['show']['1']                  = 'Zeige Details der Einstellung ID %s';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortable']['0']              = 'Sortierbar';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['1']           = 'Aufsteigende Sortierung nach Anfangsbuchstabe';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['10']          = 'Absteigende Sortierung nach Jahr';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['11']          = 'Aufsteigende Sortierung';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['12']          = 'Absteigende Sortierung';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['2']           = 'Absteigende Sortierung nach Anfangsbuchstabe';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['3']           = 'Aufsteigende Sortierung nach den ersten X Buchstaben';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['4']           = 'Absteigende Sortierung nach den ersten X Buchstaben';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['5']           = 'Aufsteigende Sortierung nach Tag';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['6']           = 'Absteigende Sortierung nach Tag';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['7']           = 'Aufsteigende Sortierung nach Monat';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['8']           = 'Absteigende Sortierung nach Monat';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['sortingflag']['9']           = 'Aufsteigende Sortierung nach Jahr';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['spaceToUnderscore']['0']     = 'Leerzeichen mit Unterstrichen ersetzen';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['stylepicker']                = 'CSS-Wizard';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['template']['0']              = 'Angepasstes Template für die Ausgabe';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['title_legend']               = 'Typ';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['tl_class']['0']              = 'Backend-Klasse';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['trailingSlash_options']['0'] = 'Schrägstrich beim Speichern entfernen';
+$GLOBALS['TL_LANG']['tl_metamodel_dcasetting']['trailingSlash_options']['1'] = 'Schrägstrich beim Speichern hinzufügen';

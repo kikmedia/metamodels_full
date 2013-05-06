@@ -1,26 +1,23 @@
 <?php
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package	   MetaModels
- * @subpackage Backend
- * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-04T02:11:31+02:00
  */
 
-/**
- * Fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['dca_combiner']        = array('Zugriffsrechte für Paletten und Ansichten', 'Für ausgewählte Frontend-Mitgliedergruppen (wenn angegeben) und ausgewählte Backend-Benutzergruppen (falls angegeben) die ausgewählte Palette und Ansicht benutzen.');
-$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['fe_group']            = array('FE-Gruppe', 'Die Frontend-Mitgliedergruppe auswählen, für die diese Kombination gilt.');
-$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['be_group']            = array('BE-Gruppe', 'Die Backend-Benutzergruppe auswählen, für die diese Kombination gilt.');
-$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['dca_id']              = array('Palette wählen', 'Die entsprechende Palette auswählen.');
-$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['view_id']             = array('Ansicht wählen', 'Die entsprechende Ansicht auswählen.');
-$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['sysadmin']            = 'Administrator';
 
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['be_group']['0']     = 'Benutzergruppe';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['be_group']['1']     = 'Die Benutzergruppe die benutzt werden soll.';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['dca_combiner']['0'] = 'Rechte für Eingabe Bildschirm und Ansichten.';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['dca_id']['0']       = 'Der Eingabebildschirm';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['dca_id']['1']       = 'Der zu benutzende Eingabebildschirm.';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['fe_group']['0']     = 'Mitgliedergruppe';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['fe_group']['1']     = 'Die zu benutzende Mitglieder Gruppe.';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['sysadmin']          = 'Administrator';
+$GLOBALS['TL_LANG']['tl_metamodel_dca_combine']['view_id']['1']      = 'Die zu benutzende Ansicht.';

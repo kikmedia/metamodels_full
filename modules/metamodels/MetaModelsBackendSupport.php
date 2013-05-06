@@ -7,7 +7,7 @@
  *
  * PHP version 5
  * @package	   MetaModels
- * @subpackage Interfaces
+ * @subpackage Frontend
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  * @copyright  The MetaModels team.
  * @license    LGPL.
@@ -15,33 +15,27 @@
  */
 
 /**
- * This is the MetaModel filter interface.
+ * Implementation of the MetaModel Backend Module that displays nice and helpfull stuff..
  *
  * @package	   MetaModels
- * @subpackage Interfaces
+ * @subpackage Backend
  * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
  */
-interface IMetaModelFilter
+class MetaModelsBackendSupport extends BackendModule
 {
 	/**
-	 * Create an copy of this filter.
-	 *
-	 * @return IMetaModelFilter
+	 * The template to use
+	 * @var string
 	 */
-	public function createCopy();
+	protected $strTemplate = 'be_supportscreen';
 
 	/**
-	 * Adds a filter rule to this filter chain.
-	 *
-	 * @param IMetaModelFilterRule $objFilterRule the filter rule to add.
+	 * Compile the current element
 	 */
-	public function addFilterRule(IMetaModelFilterRule $objFilterRule);
-
-	/**
-	 * Narrow down the list of Ids that match the given filter.
-	 *
-	 * @return int[]|null all matching Ids or null if all ids did match.
-	 */
-	public function getMatchingIds();
+	protected function compile()
+	{
+		$GLOBALS['TL_CSS'][] = 'system/modules/metamodels/html/style.css';
+		// TODO: if we need some information in the Template, add it here.
+		// $this->Template->some_information = 'pretty important data';
+	}
 }
-
