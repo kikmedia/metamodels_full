@@ -17,7 +17,7 @@
 // preserve values by extensions but insert as first entry after 'system'
 $arrOld = (array)$GLOBALS['BE_MOD']['metamodels'];
 unset($GLOBALS['BE_MOD']['metamodels']);
-array_insert($GLOBALS['BE_MOD'], array_search('system', array_keys($GLOBALS['BE_MOD']))+1, array
+array_insert($GLOBALS['BE_MOD'], array_search('accounts', array_keys($GLOBALS['BE_MOD']))+1, array
 (
 	'metamodels' => array_replace_recursive(array
 	(
@@ -40,7 +40,7 @@ array_insert($GLOBALS['BE_MOD'], array_search('system', array_keys($GLOBALS['BE_
 			'rendersetting_addall'  => array('TableMetaModelRenderSetting', 'addAll'),
 			'callback'              => 'MetaModelBackendModule'
 		),
-		'support_for_mm' => array
+		'support_metamodels' => array
 		(
 			'icon'                  => 'system/modules/metamodels/html/support.png',
 			'callback'              => 'MetaModelsBackendSupport'
@@ -87,6 +87,8 @@ array_insert($GLOBALS['BE_MOD'], array_search('system', array_keys($GLOBALS['BE_
 		IMAGEPATH    path to an icon (16x16) that represents the filter rule type. Based from TL_ROOT.
 		NESTINGVALUE boolean true or false. If this is true, you indicate that this rule may contain child rules.
 */
+
+$GLOBALS['MM_FILTER_PARAMS'] = array();
 
 $GLOBALS['METAMODELS']['filters']['idlist'] = array
 (
@@ -144,8 +146,9 @@ if (TL_MODE=='BE')
 
 array_insert($GLOBALS['FE_MOD']['metamodels'], 9, array
 (
-	'metamodel_list'            => 'ModuleMetaModelList',
-	'metamodels_frontendfilter' => 'ModuleMetaModelFrontendFilter'
+	'metamodel_list'              => 'ModuleMetaModelList',
+	'metamodels_frontendfilter'   => 'ModuleMetaModelFrontendFilter',
+	'metamodels_frontendclearall' => 'ModuleMetaModelFrontendClearAll'
 )
 );
 
@@ -154,8 +157,9 @@ array_insert($GLOBALS['FE_MOD']['metamodels'], 9, array
  */
 array_insert($GLOBALS['TL_CTE']['metamodels'], 9, array
 (
-	'metamodel_content'         => 'ContentMetaModel',
-	'metamodels_frontendfilter' => 'ContentMetaModelFrontendFilter'
+	'metamodel_content'           => 'ContentMetaModel',
+	'metamodels_frontendfilter'   => 'ContentMetaModelFrontendFilter',
+	'metamodels_frontendclearall' => 'ContentMetaModelFrontendClearAll'
 )
 );
 
@@ -165,16 +169,17 @@ array_insert($GLOBALS['TL_CTE']['metamodels'], 9, array
 
 $GLOBALS['TL_FFL']['multitext'] = 'WidgetMultiText';
 $GLOBALS['TL_FFL']['tags']      = 'WidgetTags';
-$GLOBALS['TL_FFL']['range']      = 'WidgetRange';
+$GLOBALS['TL_FFL']['range']     = 'WidgetRange';
 
 /**
  * HOOKS
  */
-$GLOBALS['TL_HOOKS']['loadDataContainer'][] = array('MetaModelBackend', 'createDataContainer');
-$GLOBALS['TL_HOOKS']['loadDataContainer'][] = array('MetaModelDatabase', 'createDataContainer');
-$GLOBALS['TL_HOOKS']['loadDataContainer'][] = array('TableMetaModelFilterSetting', 'createDataContainer');
-$GLOBALS['TL_HOOKS']['loadDataContainer'][] = array('TableMetaModelRenderSetting', 'createDataContainer');
-$GLOBALS['TL_HOOKS']['loadDataContainer'][] = array('TableMetaModelDcaSetting', 'createDataContainer');
+$GLOBALS['TL_HOOKS']['loadDataContainer'][]      = array('MetaModelBackend', 'createDataContainer');
+$GLOBALS['TL_HOOKS']['loadDataContainer'][]      = array('MetaModelDatabase', 'createDataContainer');
+$GLOBALS['TL_HOOKS']['loadDataContainer'][]      = array('TableMetaModelFilterSetting', 'createDataContainer');
+$GLOBALS['TL_HOOKS']['loadDataContainer'][]      = array('TableMetaModelRenderSetting', 'createDataContainer');
+$GLOBALS['TL_HOOKS']['loadDataContainer'][]      = array('TableMetaModelDcaSetting', 'createDataContainer');
+$GLOBALS['TL_HOOKS']['outputFrontendTemplate'][] = array('MetaModelFrontendFilter', 'generateClearAll');
 
 /**
  * Dependencies we need.

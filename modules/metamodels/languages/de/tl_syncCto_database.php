@@ -8,8 +8,9 @@
  *
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
- * last-updated: 2013-05-06T10:11:20+02:00
+ * last-updated: 2013-05-13T22:11:20+02:00
  */
+
 
 $GLOBALS['TL_LANG']['tl_syncCto_database']['tl_metamodel']                = 'MetaModels';
 $GLOBALS['TL_LANG']['tl_syncCto_database']['tl_metamodel_attribute']      = 'MetaModels Attribute';

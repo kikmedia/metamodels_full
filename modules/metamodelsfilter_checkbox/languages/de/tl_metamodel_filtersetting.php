@@ -1,36 +1,22 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package    MetaModels
- * @subpackage FilterCheckbox
- * @author     Christian de la Haye <service@delahaye.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:14:04+02:00
  */
 
-/**
- * filter types
- */
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['typenames']['checkbox'] = 'Ja/nein';
 
-
-/**
- * fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['ynfield']     = array('Ja/Nein statt Attributname', 'Ja oder nein statt Attributnamen anzeigen und Attributnamen als Überschrift verwenden.');
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['ynmode']      = array('Modus', 'Ja/Nein auswählbar machen');
-
-
-/**
- * labels
- */
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['yes']          = 'Ja-Checkbox';
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['no']           = 'Nein-Checkbox';
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['radio']        = 'Radio-Auswahl';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['no']                    = 'Nein-Checkbox';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['radio']                 = 'Radio-Buttons';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['typenames']['checkbox'] = 'Ja / Nein';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['yes']                   = 'Ja-Checkbox';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['ynfield']['0']          = '"Ja/Nein" anstatt Attribut-Name';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['ynfield']['1']          = 'Zeige "Ja/Nein" anstelle des Attribut-Namens. Dieser Attribut-Name steht auch als Überschrift zur Verfügung.';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['ynmode']['0']           = 'Modus';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['ynmode']['1']           = 'Mache ja/nein auswählbar.';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The MetaModels extension allows the creation of multiple collections of custom items,
  * each with its own unique set of selectable attributes, with attribute extendability.
@@ -7,23 +8,18 @@
  *
  * PHP version 5
  * @package    MetaModels
- * @subpackage FrontendFilter
+ * @subpackage FilterFromTo
  * @author     Christian de la Haye <service@delahaye.de>
  * @copyright  The MetaModels team.
  * @license    LGPL.
  * @filesource
  */
-if (!defined('TL_ROOT'))
-{
-	die('You cannot access this file directly!');
-}
-
 
 /**
  * Filter "value from x to y" for FE-filtering, based on filters by the meta models team.
  *
  * @package	   MetaModels
- * @subpackage FrontendFilter
+ * @subpackage FilterFromTo
  * @author     Christian de la Haye <service@delahaye.de>
  */
 class MetaModelFilterSettingFromTo extends MetaModelFilterSetting
@@ -130,11 +126,24 @@ class MetaModelFilterSettingFromTo extends MetaModelFilterSetting
 	/**
 	 * {@inheritdoc}
 	 */
-	public function getParameterFilterWidgets($arrIds, $arrFilterUrl, $arrJumpTo, $blnAutoSubmit)
+	public function getParameterFilterWidgets($arrIds, $arrFilterUrl, $arrJumpTo, $blnAutoSubmit, $blnHideClearFilter)
 	{
 		$objAttribute = $this->getMetaModel()->getAttributeById($this->get('attr_id'));
 
 		$arrOptions = $objAttribute->getFilterOptions(($this->get('onlypossible') ? $arrIds : NULL), (bool)$this->get('onlyused'));
+			
+		// Remove empty values from list.
+		foreach ($arrOptions as $mixKeyOption => $mixOption)
+		{
+			// Remove html/php tags.
+			$mixOption = strip_tags($mixOption);
+			$mixOption = trim($mixOption);
+			
+			if($mixOption === '' || $mixOption === null)
+			{
+				unset($arrOptions[$mixKeyOption]);
+			}
+		}
 
 		$arrLabel = array(
 			($this->get('label') ? $this->get('label') : $objAttribute->getName()),
@@ -178,6 +187,8 @@ class MetaModelFilterSettingFromTo extends MetaModelFilterSetting
 				$arrParamValue = NULL;
 			}
 		}
+		
+		$GLOBALS['MM_FILTER_PARAMS'][] = $this->getParamName();
 
 		return array(
 			$this->getParamName() => $this->prepareFrontendFilterWidget(
@@ -203,5 +214,3 @@ class MetaModelFilterSettingFromTo extends MetaModelFilterSetting
 		);
 	}
 }
-
-?>

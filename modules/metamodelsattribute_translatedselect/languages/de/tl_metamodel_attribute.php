@@ -1,24 +1,19 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package     MetaModels
- * @subpackage  AttributeTranslatedSelect
- * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @author      Christian de la Haye <service@delahaye.de>
- * @copyright   The MetaModels team.
- * @license     LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:13:38+02:00
  */
 
-/**
- * Fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['translatedselect']    = 'Übersetzte Auswahl';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['select_srctable']                    = array('Ursprungstabelle für Sortierung', 'Bitte wählen Sie die Tabelle aus, die das Feld für die Sortierung enthält.');
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['select_srcsorting']                  = array('Sortierspalte', 'Bitte wählen Sie die Spalte in der Ursprungstabelle aus, nach der die Auswahlen sortiert werden sollen.');
+
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['select_srcsorting']['0']          = 'Sortierspalte';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['select_srcsorting']['1']          = 'Wählen Sie bitte, welche Spalte der noch nicht übersetzten Tabelle für die Sortierung verwendet werden soll.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['select_srctable']['0']            = 'Nicht übersetzte Tabelle für die Sortierung.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['select_srctable']['1']            = 'Bitte nennen Sie die Tabelle welche die zu sortieren de Spalte enthält.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['translatedselect'] = 'Übersetzter Select';

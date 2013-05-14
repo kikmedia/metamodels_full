@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The MetaModels extension allows the creation of multiple collections of custom items,
  * each with its own unique set of selectable attributes, with attribute extendability.
@@ -7,7 +8,7 @@
  *
  * PHP version 5
  * @package    MetaModels
- * @subpackage FrontendFilter
+ * @subpackage FilterRange
  * @author     Christian de la Haye <service@delahaye.de>
  * @copyright  The MetaModels team.
  * @license    LGPL.
@@ -18,7 +19,7 @@
  * Filter "value in range of 2 fields" for FE-filtering, based on filters by the meta models team.
  *
  * @package	   MetaModels
- * @subpackage FrontendFilter
+ * @subpackage FilterRange
  * @author     Christian de la Haye <service@delahaye.de>
  */
 class MetaModelFilterSettingRange extends MetaModelFilterSetting
@@ -93,7 +94,7 @@ class MetaModelFilterSettingRange extends MetaModelFilterSetting
 	/**
 	 * {@inheritdoc}
 	 */
-	public function getParameterFilterWidgets($arrIds, $arrFilterUrl, $arrJumpTo, $blnAutoSubmit)
+	public function getParameterFilterWidgets($arrIds, $arrFilterUrl, $arrJumpTo, $blnAutoSubmit, $blnHideClearFilter)
 	{
 		$objAttribute = $this->getMetaModel()->getAttributeById($this->get('attr_id'));
 
@@ -101,6 +102,8 @@ class MetaModelFilterSettingRange extends MetaModelFilterSetting
 			($this->get('label') ? $this->get('label') : $objAttribute->getName()),
 			'GET: '.$this->getParamName()
 		);
+		
+		$GLOBALS['MM_FILTER_PARAMS'][] = $this->getParamName();
 
 		return array(
 			$this->getParamName() => $this->prepareFrontendFilterWidget(
@@ -121,4 +124,3 @@ class MetaModelFilterSettingRange extends MetaModelFilterSetting
 		);
 	}
 }
-

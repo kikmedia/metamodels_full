@@ -8,8 +8,9 @@
  *
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  *
- * last-updated: 2013-05-05T17:54:22+02:00
+ * last-updated: 2013-05-13T22:11:20+02:00
  */
+
 
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['advanced_legend']  = 'Erweiterte Einstellungen';
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['colname']['0']     = 'Spaltenname';

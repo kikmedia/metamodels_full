@@ -1,26 +1,25 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package    MetaModels
- * @subpackage AttributeFile
- * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:12:39+02:00
  */
 
-/**
- * Fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['file'] = 'Datei';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_customFiletree'] = array('Dateibaum anpassen', 'Mit dieser Option können Sie individuelle Optionen für die Einbindung von Dateien erstellen.');
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_uploadFolder']   = array('Wurzelverzeichnis', 'Wählen Sie das Verzeichnis aus, das Nutzern als Wurzelverzeichnis im Dateibaum dienen soll, wenn sie in der Dateiauswahl eine Auswahl treffen.');
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_validFileTypes'] = array('Gültige Dateitypen', 'Bitte geben Sie eine kommagetrennte Liste der Dateitypen ein, die für dieses Feld gültig sind.');
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_filesOnly']      = array('Nur Dateien erlauben', 'Wählen Sie diese Option aus, damit die Auswahl auf Dateien beschränkt bleibt. Ordner werden nicht auswählbar sein.');
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_multiple']       = array('Mehrfachauswahl', 'Wenn Sie die Mehrfachauswahl aktivieren können Benutzer mehrere Dateien (oder Ordner, falls freigegeben) auswählen.');
+
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_customFiletree']['0'] = 'Passen Sie den Dateibaum an.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_customFiletree']['1'] = 'Erlaubt Ihnen, eigene Einstellungen für den Dateibaum zu treffen.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_filesOnly']['0']      = 'Nur Dateien erlauben';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_filesOnly']['1']      = 'Wählen Sie diese Option, um die Auswahl auf Einzeldateien zu beschränken und die Auswahl kompletter Ordner zu verhindern.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_multiple']['0']       = 'Mehrfachauswahl';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_multiple']['1']       = 'Wenn aktiviert können mehrere Dateien ausgewählt werden.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_uploadFolder']['0']   = 'Wurzelordner (Root) angeben';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_uploadFolder']['1']   = 'Wählen Sie den Punkt im Dateibaum, von dem aus Benutzer Daten hinzufügen können.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_validFileTypes']['0'] = 'Gültige Dateitypen';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['file_validFileTypes']['1'] = 'Bitte geben Sie eine Liste gültiger Dateitypen ein. Die Liste besteht aus kommagetrennten Werten.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['file']      = 'Datei';

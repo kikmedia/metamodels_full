@@ -1,25 +1,20 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package     MetaModels
- * @subpackage  AttributeAlias
- * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @author     Christian Kolb <info@kolbchristian.de>
- * @copyright   The MetaModels team.
- * @license     LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:12:15+02:00
  */
 
-/**
- * Fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['alias'] = 'Alias';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['alias_fields']         = array('Aliasfelder', 'Bitte wählen Sie ein oder mehrere Felder aus, aus denen der Alias erstellt werden soll.');
+
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['alias_fields']['0']    = 'Alias-Felder.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['alias_fields']['1']    = 'Bitte wählen Sie eines oder mehrere Attribute, um daraus einen Alias zu bilden.';
 $GLOBALS['TL_LANG']['tl_metamodel_attribute']['field_attribute']      = 'Attribute';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['force_alias']          = array('Alias Neuerstellung erzwingen', 'Erzwingt die Neuerstellung des Alias, wenn sich eines der abhängigen Felder ändert. Alte URLs, die auf dem Alias basieren, werden dadurch ungültig.');
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['force_alias']['0']     = 'Neuerstellung des Alias erzwingen.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['force_alias']['1']     = 'Auswählen, um eine Neuerstellung des Alias zu erzwingen, wenn sich eines der abhängigen Felder ändert. Beachten Sie, dass bisherige URLs dadurch ungültig werden können.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['alias'] = 'Alias';

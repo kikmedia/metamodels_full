@@ -1,19 +1,17 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package     MetaModels
- * @subpackage  AttributeCountry
- * @author      Oliver Hoff <oliver@hofff.com>
- * @copyright   The MetaModels team.
- * @license     LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:14:59+02:00
  */
 
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['country']    = 'Land';
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['countries']                 = array('Verfügbare Länder einschränken', 'Die zur Auswahl verfügbaren Länder einschränken. Wenn keine Einschränkungen getroffen wurden, sind alle Länder verfügbar.');
+
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['countries']['0']         = 'Verfügbare Länder filtern';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['countries']['1']         = 'Filtern Sie die Länder, die verfügbar sind. Ist kein Land ausgewählt, sind alle Länder verfügbar.';
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['country'] = 'Land';

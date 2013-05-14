@@ -1,28 +1,21 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package    MetaModels
- * @subpackage FilterTags
- * @author     Christian de la Haye <service@delahaye.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:14:36+02:00
  */
 
-/**
- * filter types
- */
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['typenames']['tags']     = 'Mehrfachauswahl';
 
-/**
- * fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['useor']        = array('ODER', 'ODER-Verknüpfung der Tags. Wird bei Auswahl von Select-Attributen automatisch aktiviert.');
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['onlyused']     = array('Nur zugeordnete Werte', 'In den Optionen nur Werte zeigen, die einem Datensatz zugeordnet sind.');
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['onlypossible'] = array('Nur verbleibende Werte', 'In den Optionen nur Werte zeigen, die mit dem aktuellen Filter weiterhin vorkommen.');
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['onlypossible']['0'] = 'Nur verbleibende Tags';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['onlypossible']['1'] = 'Zeige nur Optionen, die zugeordnet sind, nachdem der Filter ausgeführt wurde.';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['onlyused']['0']     = 'Nur zugeordnete Tags';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['onlyused']['1']     = 'Zeige nur Optionen, die im MetaModel bereits zugeordnet sind.';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['typenames']['tags'] = 'Mehrfachauswahl';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['useor']['0']        = 'ODER';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['useor']['1']        = 'ODER-Verknüpfung der Tags. Wird automatisch gesetzt, wenn das Attribut vom Typ "Auswahl" ist.';

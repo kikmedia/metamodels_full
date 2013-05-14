@@ -1,38 +1,23 @@
 <?php
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package    MetaModels
- * @subpackage FrontendFilter
- * @author     Christian de la Haye <service@delahaye.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
- * @filesource
- */
-if (!defined('TL_ROOT'))
-{
-	die('You cannot access this file directly!');
-}
-
-
-/**
- * filter types
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:14:13+02:00
  */
 
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['typenames']['fromto']   = 'Wert von-/bis';
 
-
-/**
- * fields
- */
-
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['moreequal']    = array('Wert 1 eingeschlossen', 'Standard: nicht eingeschlossen.');
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['lessequal']    = array('Wert 2 eingeschlossen', 'Standard: nicht eingeschlossen.');
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['fromfield']    = array('Feld für Wert 1', 'FE-Feld für Wert 1 zeigen.');
-$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['tofield']      = array('Feld für Wert 2', 'FE-Feld für Wert 2 zeigen.');
-
-?>
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['fromfield']['0']      = 'Feld für Wert 1';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['fromfield']['1']      = 'Zeige Frontend-Feld für Wert 1.';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['lessequal']['0']      = 'Wert 2 einfügen';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['lessequal']['1']      = 'Standard: ausgeschlossen.';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['moreequal']['0']      = 'Wert 1 einfügen';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['moreequal']['1']      = 'Standard: ausgeschlossen.';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['tofield']['0']        = 'Feld für Wert 2';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['tofield']['1']        = 'Zeige Frontend-Feld für Wert 2.';
+$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['typenames']['fromto'] = 'Wert von/bis';

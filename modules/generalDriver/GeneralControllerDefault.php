@@ -1486,6 +1486,16 @@ class GeneralControllerDefault extends Controller implements InterfaceGeneralCon
 
 		// Callback
 		$this->getDC()->getCallbackClass()->onsaveCallback($objDBModel);
+				
+		// Check if we have a field with eval->alwaysSave
+		foreach ($this->objDC->getFieldList() as $arrFieldSettings)
+		{
+			if($arrFieldSettings['eval']['alwaysSave'] == true)
+			{
+				$objDBModel->setMeta(DCGE::MODEL_IS_CHANGED, true);
+				break;
+			}
+		}
 
 //        $this->getNewPosition($objDBModel, 'create', null, false);
 		// everything went ok, now save the new record
@@ -1579,7 +1589,7 @@ class GeneralControllerDefault extends Controller implements InterfaceGeneralCon
 			}
 
 			// Check if we have a valide sorting.
-			if ($intNextSorting <= 2 && !$blnWithoutReorder)
+			if (($intLowestSorting < 2 || $intNextSorting <= 2) && !$blnWithoutReorder)
 			{
 				// ToDo: Add child <=> parent config.
 				$objConfig = $objCDP->getEmptyConfig();
@@ -1647,7 +1657,7 @@ class GeneralControllerDefault extends Controller implements InterfaceGeneralCon
 			}
 
 			// Check if we have a valide sorting.
-			if (round(($intNextSorting - $intAfterSorting) / 2) <= 2 && !$blnWithoutReorder)
+			if (($intAfterSorting < 2 || $intNextSorting < 2 || round(($intNextSorting - $intAfterSorting) / 2) <= 2) && !$blnWithoutReorder)
 			{
 				// ToDo: Add child <=> parent config.
 				$objConfig = $objCDP->getEmptyConfig();

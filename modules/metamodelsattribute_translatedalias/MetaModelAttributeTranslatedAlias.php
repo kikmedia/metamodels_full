@@ -31,7 +31,7 @@ class MetaModelAttributeTranslatedAlias extends MetaModelAttributeTranslatedRefe
 
 	public function getAttributeSettingNames()
 	{
-		return array_merge(parent::getAttributeSettingNames(), array('talias_fields', 'isunique', 'force_talias'));
+		return array_merge(parent::getAttributeSettingNames(), array('talias_fields', 'isunique', 'force_talias', 'alwaysSave'));
 	}
 
 	public function getFieldDefinition($arrOverrides = array())
@@ -45,6 +45,13 @@ class MetaModelAttributeTranslatedAlias extends MetaModelAttributeTranslatedRefe
 		{
 			$arrFieldDef['eval']['mandatory'] = false;
 		}
+		
+		// If "force_alias" is ture set alwaysSave to true.
+		if ($this->get('force_alias'))
+		{
+			$arrFieldDef['eval']['alwaysSave'] = true;
+		}
+		
 		return $arrFieldDef;
 	}
 
@@ -70,12 +77,13 @@ class MetaModelAttributeTranslatedAlias extends MetaModelAttributeTranslatedRefe
 		// implode with '-'
 		$strAlias  = standardize(implode('-', $arrAlias));
 
+		$strLanguage = $this->getMetaModel()->getActiveLanguage();
 		// we need to fetch the attribute values for all attribs in the alias_fields and update the database and the model accordingly.
-		if ($this->get('isunique') && $this->searchFor($strAlias))
+		if ($this->get('isunique') && $this->searchForInLanguages($strAlias, $strLanguage))
 		{
 			$intCount = 1;
 			// ensure uniqueness.
-			while (count($this->searchFor($strAlias . '-' . (++$intCount))) > 0){}
+			while (count($this->searchForInLanguages($strAlias . '-' . (++$intCount), $strLanguage)) > 0){}
 			$strAlias = $strAlias . '-' . $intCount;
 		}
 

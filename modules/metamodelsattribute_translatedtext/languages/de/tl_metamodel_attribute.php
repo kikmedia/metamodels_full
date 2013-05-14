@@ -1,21 +1,15 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package     MetaModels
- * @subpackage  AttributeTranslatedText
- * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @copyright   The MetaModels team.
- * @license     LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:13:52+02:00
  */
 
-/**
- * Fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['translatedtext']    = 'Übersetzter Text';
+
+$GLOBALS['TL_LANG']['tl_metamodel_attribute']['typeOptions']['translatedtext'] = 'Übersetzter Text';

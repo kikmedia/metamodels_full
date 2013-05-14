@@ -1,31 +1,28 @@
 <?php
-
 /**
- * The MetaModels extension allows the creation of multiple collections of custom items,
- * each with its own unique set of selectable attributes, with attribute extendability.
- * The Front-End modules allow you to build powerful listing and filtering of the
- * data in each collection.
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * PHP version 5
- * @package    MetaModels
- * @subpackage AttributeFile
- * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
- * @filesource
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/metamodels/language/de/
+ *
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2013-05-13T22:12:39+02:00
  */
 
-/**
- * Fields
- */
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_showImage'] = array('Vorschaubild aktivieren', 'Falls gewählt wird ein Vorschaubild (Thumbnail) erzeugt.');
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_sortBy']    = array('Sortieren nach ...', 'Bitte den Sortiermodus auswählen.');
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_showLink']  = array('Link als Download oder Lightbox erzeugen', 'Mit Aktivierung dieser Option wird das Bild mit einem Link umgeben, um entweder einen Download oder eine Lightbox zu ermöglichen.');
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_imageSize'] = array('Bildbreite und -höhe', 'Bitte die entweder die Bildbreite, die Bildhöhe oder beides angeben, damit die Bildgröße angepasst wird. Falls dieses feld leer bleibt wird das Bild in Originalgröße angezeigt.');
 
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['name_asc']       = 'Dateiname (aufsteigend)';
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['name_desc']      = 'Dateiname (absteigend)';
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['date_asc']       = 'Datum (absteigend)';
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['date_desc']      = 'Datum (aufsteigend)';
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['meta']           = 'Meta-Datei (meta.txt)';
-$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['random']         = 'Zufällige Reihenfolge';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['date_asc']            = 'Datum (aufsteigend)';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['date_desc']           = 'Datum (absteigend)';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_imageSize']['0'] = 'Bildbreite und -höhe';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_imageSize']['1'] = 'Bitte geben Sie entweder die Bildbreite, die Bildhöhe oder beides ein, damit das Bild skaliert wird. Falls Sie beide Felder leer lassen wird das Bild in Originalgröße ausgegeben.';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_showImage']['0'] = 'Als Bildfeld mit Vorschaubild benutzen';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_showImage']['1'] = 'Falls aktiviert wird für das Bild ein verkleinertes Vorschaubild generiert.';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_showLink']['0']  = 'Link als Download oder Lightbox erstellen';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_showLink']['1']  = 'Das Item wird in einen Link eingebettet, der entweder für eine Großansicht oder einen Download dienen kann.';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_sortBy']['0']    = 'Sortierung nach';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['file_sortBy']['1']    = 'Bitte wählen Sie die Sortierreihenfolge.';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['meta']                = 'Meta-Datei (meta.txt)';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['name_asc']            = 'Dateiname (aufsteigend)';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['name_desc']           = 'Dateiname (absteigend)';
+$GLOBALS['TL_LANG']['tl_metamodel_rendersetting']['random']              = 'Zufällige Reihenfolge';
